@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+body {
+  font-family: 'open sans condensed';
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
