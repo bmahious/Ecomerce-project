@@ -12,7 +12,7 @@ import MenuItem from '../menu-item/menu-item.component';
                 title: 'hats',
                 imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
                 id: 1,
-                linkUrl: 'shop/hats'
+                linkUrl: 'hats'
                 },
                 {
                 title: 'jackets',
@@ -49,8 +49,15 @@ import MenuItem from '../menu-item/menu-item.component';
             <div className="directory-menu">
                 {
                     // we will distruct the title & image & id so we'll not repeat section.title & section.id .. as props
-                    this.state.sections.map( ({title, imageUrl, id, size}) => (
-                        <MenuItem key={id} title= {title} imageUrl={imageUrl} size={size} /> 
+                    // this.state.sections.map( ({title, imageUrl, id, size, linkUrl }) => (
+                    //     <MenuItem key={id} title= {title} imageUrl={imageUrl} size={size} history={this.props.history} linkUrl={linkUrl} /> 
+                    // ))
+
+                    // with this we'll use ...otherSectionProps so we can not repeat all ths props at any time
+                    // in this case we'll display all the objects that we have in our state section 
+                    
+                    this.state.sections.map( ({id, ...otherSectionProps }) => (
+                        <MenuItem key={id} { ...otherSectionProps} /> 
                     ))
                 }   
             </div>
