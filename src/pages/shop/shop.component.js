@@ -26,9 +26,8 @@ class ShopPage extends Component {
 
 export default ShopPage;
 
-                 {/* {
-                     collections.filter((collect, idx ) => ((collect, idx) < 1 )).map(({id, ...otherCollectionsProps}) => (
-                         <CollectionPreview collections={collections} key={id} {...otherCollectionsProps}/>
-                       
-                     ))
-                 } */}
+              
+                     //collections.filter((collect, idx ) => ((collect, idx) < 1 )).map(({id, ...otherCollectionsProps}) => (
+                         //<CollectionPreview collections={collections} key={id} {...otherCollectionsProps}/>
+                    // ))
+                
